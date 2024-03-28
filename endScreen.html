@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel = "stylesheet" href = "styles.css">
+  </head>
+  <body>
+    <div id ="endScreen" >
+      <div class = "headerTitleContainer">
+        <h1>Game Over</h1>
+      </div>
+        <div id = "playerFinalScoreId" class = "playerFinalScore"></div>
+        <div id ="computerFinalScoreId" class ="computerFinalScore"></div>  
+        <div class ="buttonContainer">
+          <div class ="buttonWrapper">
+            <button id = "playAgainId" class = "playAgain">Play Again</button>
+            <button id ="homeButtonId" class ="homeButton">Home</button>
+          </div>
+        </div>
+    </div>
+    <script type = "text/javascript" src = "./src/globalVar.js"></script>
+    <script src = "./src/endscreen.js" type = "module" defer></script>
+  </body>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script -->
+  <!-- Defer loads the script in parallel with the page and executes it after the page has been parsed. -->
+  <!-- Async loads the script in parallel with the page and executes it as soon as it is available. -->
+</html>

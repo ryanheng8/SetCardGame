@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<link rel = "stylesheet" href = "styles.css">
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta http-equiv = "X-UA-Compatible" content="IE=edge" />
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+    <title>Set Game</title>
+  </head>
+  <body>
+    <div id = "game">
+      <header>
+        <div class = "scoreTitlesContainer">
+          <div id = "playerScoreId" class = "playerScore"></div>
+          <div id = "computerScoreId" class = "computerScore"></div>
+        </div>
+        <!-- container for time to keep text and clock together -->
+        <div class = "timeContainer">
+          <span class = "timeTitle">TIME: </span>
+          <span id ="countdown" class = "cntDwn"></span> 
+        </div>
+        <!-- quit button -->
+        <span><button id = "quitButton" class = "quitButton">QUIT</button></span>       
+      </header>
+      <main>
+        <!-- handle card log -->       
+        <span class = "logTitle ">LOG</span>  
+        <!-- want to add cards to this div-->
+        <div class = "logDisplay">
+          <div id = "pastSetCards"></div>         
+        </div>
+        <!-- button to call set -->
+        <button id = "setButton" class = "setButton"> Set</button>
+        <!-- handles displaying cards -->
+        <div class ="deckDisplay">
+          <div id = "cardsToDisplay"></div>
+        </div>
+
+        <!-- hint button -->
+        <span><button id = "hintButton" class = "hintButton">HINTS</button></span>
+        <!-- Hint pop up when hint button is clicked -->
+        <div id = "hintPopup" class = "hintPopup">
+          <form class = "hintContainer">
+            <div class = "hintTitleContainer">
+              <h1 id = "hintHeader">HINTS:</h1>
+                <div id = "hintList">
+                  <ul>
+                    <li id = hint1 style = "display: none;"></li>
+                    <li id = hint2 style = "display: none;"></li>
+                    <li id = hint3 style = "display: none;"></li>
+                    <li id = hint4 style = "display: none;"></li>
+                    <li id = hint5 style = "display: none;"></li>
+                  </ul>
+                </div>
+            </div>
+            <button id = "moreHint" type = "button" class = "hintButton">GIVE HINT!</button>
+            <button id = "closeHint" type = "button" class = "closeHint">Close</button>
+          </form>
+        </div>
+
+      </main>
+    </div>
+  </body>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script -->
+  <!-- Defer loads the script in parallel with the page and executes it after the page has been parsed. -->
+  <!-- Async loads the script in parallel with the page and executes it as soon as it is available. -->
+  <script type = "text/javascript" src = "./src/globalVar.js"></script> 
+  <script src = "./src/gamescreen.js" type = "module" defer></script>
+</html>

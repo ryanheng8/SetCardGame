@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset = "UTF-8" />
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge" />
+    <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel ="stylesheet" href ="styles.css">
+  </head>
+  <body>  
+    <div id = "homeScreen" >
+      <div class ="headerTitleContainer">
+        <h1>Welcome to SET</h1>
+      </div>
+      <main>
+        <!-- button container for play and rules buttons  -->
+        <div class="homeButtonContainer">
+          <div class="buttonWrapper">
+            <button id = "playButtonId" class = "playGame">Play Game</button>
+            <button id = "rulesButtonId" class = "rulesButton"> Rules </button>
+            <button id = "playComputerId" class ="playComputer">Play vs CPU</button>
+            <div class="dropdown">
+              <button id = "chooseDiffId" class ="chooseDiff">Choose Difficulty</button>
+              <div class="dropdown-content">
+                <button id = "easyButtonId" class = "easyButton">Easy</button>
+                <button id = "mediumButtonId" class = "mediumButton">Medium</button>
+                <button id = "hardButtonId" class = "hardButton">Hard</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- all of this stuff is for the rule popup when the rules button is clicked -->
+        <div class="rulesPopup" id="setRules">
+          <form class = "rulesContainer">
+            <div class ="rulesTitleContainer">
+             <h1>The Rules</h1>
+            </div>
+            <h2>Game Rules: </h2>
+              <p>The goal of the game is to call a "Set" of 3 cards from 12 cards laid out on the table. The deck is made up of 81 unique cards with a variation of these four features: </p>
+              <div class = "listContainer">
+                <ul>
+                  <li>Color - Red, Green or Purple</li>
+                  <li>Symbol - Oval, Squiggle or Diamond</li>
+                  <li>Number - One, Two or Three</li>
+                  <li>Shading - Solid, Open or Striped</li>
+                </ul>
+              </div>
+              <p>A "Set" consists of 3 cards in which each feature is either the same on each car or is different on each card. Any feature in the "Set: is either common to all 3 or different on each card. </p>
+            
+            <h2>Example Sets:</h2>
+              <div class = "listContainer">
+                <ul>
+                  <li>All 3 cards are red, ovals, two symbols and all have different shadings.</li>
+                  <li>All 3 cards have difference colors, symbols and numbers and all 3 have the same shading.</li>
+                  <li>All 3 cards have different colors, symbols, numbers and shadings.</li>
+                </ul>
+              </div>
+            
+            <h2>Non Set Examples:</h2>
+              <div class = "listContainer">
+                <ul> 
+                  <li>All 3 cards have different colors, shapes and numbers, and 2 are open one is not.</li>
+                  <li>All 3 cards are squiggles, have different shadings and numbers, however two are red and one is not.</li>
+                </ul>
+              </div>
+              <p><b>"Magic Rule": </b><em>If two are... and one is not, then it is not* a set. </em></p>
+          
+            <h2>Game Play</h2>
+            <p>The deck is shuffled and 12 cards are layed out face up on the screen to be seen by all.
+                Players can remove a "Set" of 3 cards as they are seen. Each "Set" is checked by the game. If correct, the "Set" is kept by the player, their score increases and the 3 cards are replaced from the deck, if they are incorrect, they will lose a point.
+                Players do not take turns, but instead pick them up as soon as they are seen. To aquire a set, a player must "call" set by clicking the set button before selecting the cards. If the set has not been "called" no cards may be selected.
+                After "calling" set the player has 10 seconds to select a set, otherwise the player will lose a point and the 3 cards will be returned to the table.
+                If more than 3 cards are selected the player's set will be reset and the player will recieve a warning.
+                The hint button may be pressed at any time in the game, for a maximum of 5 hints.
+                It is possible to recieve negative points if more wrong sets were chosen then correct sets.
+                If there are no sets within the 12 dealt cards, the deck will be reshuffled and 12 new cards will be dealt.
+                The game continues on until there are no sets left in the entire deck.
+                The game may be ended automatically (when no sets are available in the entire deck) or by clicking the "Quit" button.</p>
+            <h2>CPU Rules</h2>
+            <p>If no difficulty level is set, the CPU will automatically play under medium difficulty
+                If the CPU calls a set, a player may not call set until the new cards are dealt
+                The player with the highest score at the end wins.</p>  
+            <button id ="closeButtonId" type = "button" class = "closeRules">Close</button>
+          </form>
+        </div>
+      </main>
+      
+    </div> 
+    <script type ="text/javascript" src ="./src/globalVar.js"></script> 
+    <script src ="./src/homescreen.js" type ="module" defer></script>
+  </body>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script -->
+  <!-- Defer loads the script in parallel with the page and executes it after the page has been parsed. -->
+  <!-- Async loads the script in parallel with the page and executes it as soon as it is available. -->
+
+</html>
